@@ -1,0 +1,60 @@
+<%include layout%>
+
+<%include pageTitle%>
+
+<div class="panel-body" ng-app="productCategoryModule"
+       ng-controller = "editProductCategoryController">
+    <div class="container" >
+        <form class="navbar-form navbar-left" role="search" >
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Product Category Name </label>
+                    &nbsp;&nbsp;                    
+                    <input type="text" class="form-control" placeholder="Please enter Product Category"
+                           name="productCategory"
+                           id="productCategory"
+                           ng-model="productCategory.categoryName"
+                           style="width:100%"
+                           required> 
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Product Category Details</label>
+                    &nbsp;&nbsp;
+                    <textarea type="text"
+                              class="form-control"
+                              placeholder="Product Category Details"
+                              name = "productDetails"
+                              id="productDetails"
+                              rows="5"
+                              cols="30"
+                              ng-model="productCategory.categoryDetails"
+                              style="width:100%"
+                              required>
+                    </textarea>
+                </div>
+            </div>
+            
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="form-group" style="padding-left:40%">
+                    <button type="submit" class="btn btn-primary"
+                            ng-click="editProductCategory()">
+                        Edit Product Category</button>           
+                </div>
+            </div>
+            
+            
+        </form>
+
+      </div>
+  </div>
+
+
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="../../javascripts/app/productCategory/productCategoryModule.js"></script>
+<script src="../../javascripts/app/productCategory/productCategoryService.js"></script>
+<script src="../../javascripts/app/requiredFieldValidationService.js"></script>
+<script src="../../javascripts/app/productCategory/editProductCategoryController.js"></script>
